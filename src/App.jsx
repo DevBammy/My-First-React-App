@@ -3,6 +3,10 @@ import Heading from "./component/Heading";
 import { useState } from "react";
 import { useEffect } from "react";
 import "./app.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import Services from "./Pages/Services";
 // const Content = () => {
 //   // const [userName, setUserName] = useState("John");
 //   // const [name, setName] = useState("Kenny");
@@ -31,73 +35,63 @@ import "./app.css";
 //   // );
 // };
 
-const cities = ["lagos", "Abj", "Ibadan", "jijkjbb"];
+// const cities = ["lagos", "Abj", "Ibadan", "jijkjbb"];
 
-const Content = () => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [password, setPassword] = useState("");
-  console.log(fullName, email, phoneNumber);
-  const handleLogin = (e) => {
-    e.preventDefault();
-    if (!fullName || !email || !phoneNumber || !password) {
-      return alert("pls fill all fields");
-    }
-    alert(`welcome ${fullName}`);
-  };
+// const App = () => {
+//   const [fullName, setFullName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [phoneNumber, setPhoneNumber] = useState("");
+//   const [password, setPassword] = useState("");
+//   console.log(fullName, email, phoneNumber);
+//   const handleLogin = (e) => {
+//     e.preventDefault();
+//     if (!fullName || !email || !phoneNumber || !password) {
+//       return alert("pls fill all fields");
+//     }
+//     alert(`welcome ${fullName}`);
+//   };
 
-  return (
-    <>
-      <form>
-        <div>
-          <input
-            type="text"
-            placeholder="Fullname"
-            value={fullName}
-            onChange={(e) => setFullName(e.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            type="email"
-            placeholder="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            type="tel"
-            placeholder="Phone number"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-          />
-        </div>
-        <div>
-          <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <button onClick={handleLogin}>Sumbit</button>
-      </form>
-    </>
-  );
-  // return (
-  //   <>
-  //     <div>
-  //       {cities.map((name, index) => (
-  //         <p>{name}</p>
-  //       ))}
-  //     </div>
-  //   </>
-  // );
-};
+//   return (
+//     <>
+//       <form>
+//         <div>
+//           <input
+//             type="text"
+//             placeholder="Fullname"
+//             value={fullName}
+//             onChange={(e) => setFullName(e.target.value)}
+//           />
+//         </div>
+//         <div>
+//           <input
+//             type="email"
+//             placeholder="email"
+//             value={email}
+//             onChange={(e) => setEmail(e.target.value)}
+//           />
+//         </div>
+//         <div>
+//           <input
+//             type="tel"
+//             placeholder="Phone number"
+//             value={phoneNumber}
+//             onChange={(e) => setPhoneNumber(e.target.value)}
+//           />
+//         </div>
+//         <div>
+//           <input
+//             type="password"
+//             placeholder="password"
+//             value={password}
+//             onChange={(e) => setPassword(e.target.value)}
+//           />
+//         </div>
+//         <button onClick={handleLogin}>Sumbit</button>
+//       </form>
+//     </>
+//   );
 
-export default Content;
+// export default Content;
 
 //   setUserName("mary");
 // }
@@ -129,3 +123,16 @@ export default Content;
 // );
 
 // list
+
+const App = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+      </Routes>
+    </BrowserRouter>
+  );
+};
+export default App;
