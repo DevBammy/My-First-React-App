@@ -23,3 +23,21 @@
   color: white;
   margin-bottom: 1rem;
 }
+
+/* all blogs */
+.allBlogs {
+  h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.featuredBlogs {
+  width: 100%;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: flex-start;
+  justify-content: center;
+  grid-gap: 1rem;
+}

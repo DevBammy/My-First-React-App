@@ -11,6 +11,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -40,4 +41,9 @@ a {
 
 .btn:hover {
   letter-spacing: 1px;
+}
+
+section {
+  width: 90%;
+  margin: 4rem auto;
 }
