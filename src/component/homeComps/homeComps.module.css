@@ -41,3 +41,41 @@
   justify-content: center;
   grid-gap: 1rem;
 }
+.testimonial{
+  width: 90%;
+  margin: 5rem auto;
+}
+.testimonialHead{
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 30px;
+}
+.Container{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+}
+.box{
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid black;
+  text-align: center;
+  background-color: #cecaca;
+}
+.box> img{
+  width: 200px;
+  border-radius: 200px;
+  padding-bottom: 20px;
+  object-fit: cover;
+}
+.box> span{
+  font-style: italic;
+  font-weight: bold;
+  
+}
+
+.box> p{
+  margin-top: 10px;
+}

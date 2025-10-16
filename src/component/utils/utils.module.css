@@ -103,3 +103,14 @@ header nav a.active {
     }
   }
 }
+
+.footer{
+  background-color: black;
+  color: #f2efef;
+  padding: 30px 5%;
+  text-align: center;
+  p{
+    font-size: 2rem;
+    font-weight: bold;
+  }
+}
