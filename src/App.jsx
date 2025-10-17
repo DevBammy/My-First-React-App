@@ -1,20 +1,26 @@
-import Button from './component/Button';
-import Heading from './component/Heading';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import BlogDetails from './pages/BlogDetails';
+import Header from './component/utils/Header';
+import Footer from './component/utils/Footer';
 
 const App = () => {
-  let name = 'Simon';
-  let isLoggedIn = true;
-
   return (
-    <>
-      <Heading greeting="How far" title="My Guy" />
-
-      <Button
-        text="My Website"
-        link={isLoggedIn ? 'https://devbammy.vercel.app' : '/login'}
-        target={isRaining ? '_blank' : 'replace'}
-      />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<BlogDetails />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 
