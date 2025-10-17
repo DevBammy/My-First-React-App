@@ -1,6 +1,10 @@
 import { useParams } from 'react-router-dom';
 import { blogs as allBlogs } from '../assets/blogs';
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> origin
 import moment from 'moment';
 import image from '../assets/hero.jpg';
 import styles from '../styles/blogDetails.module.css';
@@ -11,8 +15,12 @@ const BlogDetails = () => {
 
   const findBlog = blogs.find((b) => b.id == id);
 
+  useEffect(() => {
+    const findBlog = blogs.find((b) => b.id == id);
+  }, [id]);
+
   return (
-    <div>
+    <div className={styles.blogDetails}>
       <div className={styles.image}>
         <img src={image} alt="" />
 
@@ -22,8 +30,8 @@ const BlogDetails = () => {
       <div className={styles.blogBody}>
         <p>{findBlog.body}</p>
 
-        <p>{moment(findBlog.date).fromNow()}</p>
-        <span>{findBlog.author}</span>
+        <p>Posted on: {moment(findBlog.date).fromNow()}</p>
+        <span>Post by: {findBlog.author}</span>
       </div>
     </div>
   );
