@@ -8,9 +8,7 @@ const Blog = () => {
   return (
     <>
       <Header />
-      <Link to={`/blog/${blogName}`} className="1">
-        1
-      </Link>
+      <Link to={`/blog/${blogName}`} className="1">1</Link>
       <Link className="2">2</Link>
       <div className="3">3</div>
       <div className="4">4</div>
