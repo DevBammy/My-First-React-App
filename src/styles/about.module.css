@@ -1,0 +1,18 @@
+.main {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.main h2 {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.main .allBlogs {
+  width: 100%;
+  height: max-content;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  align-items: flex-start;
+}

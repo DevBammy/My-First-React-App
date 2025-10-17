@@ -1,18 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { blogs as allBLogs } from '../assets/blogs';
 import Header from '../component/utils/Header';
 import Footer from '../component/utils/Footer';
+import BlogCard from '../component/utils/BlogCard';
+
+import styles from '../styles/about.module.css';
 
 const Blog = () => {
-  const blogName = 'New Nigeria';
+  const [blogs, setBlogs] = useState(allBLogs);
+
   return (
     <>
       <Header />
-      <Link to={`/blog/${blogName}`} className="1">1</Link>
-      <Link className="2">2</Link>
-      <div className="3">3</div>
-      <div className="4">4</div>
+      <main className={styles.main}>
+        <h2>All Blog Posts</h2>
 
+        <div className={styles.allBlogs}>
+          {blogs.map((blog) => (
+            <BlogCard blog={blog} key={blog.id} />
+          ))}
+        </div>
+      </main>
       <Footer />
     </>
   );
