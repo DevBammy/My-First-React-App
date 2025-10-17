@@ -1,10 +1,6 @@
 import { useParams } from 'react-router-dom';
 import { blogs as allBlogs } from '../assets/blogs';
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-=======
 import { useEffect, useState } from 'react';
->>>>>>> origin
 import moment from 'moment';
 import image from '../assets/hero.jpg';
 import styles from '../styles/blogDetails.module.css';
