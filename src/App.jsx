@@ -37,19 +37,19 @@ import Services from "./Pages/Services";
 
 // const cities = ["lagos", "Abj", "Ibadan", "jijkjbb"];
 
-// const App = () => {
-//   const [fullName, setFullName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [phoneNumber, setPhoneNumber] = useState("");
-//   const [password, setPassword] = useState("");
-//   console.log(fullName, email, phoneNumber);
-//   const handleLogin = (e) => {
-//     e.preventDefault();
-//     if (!fullName || !email || !phoneNumber || !password) {
-//       return alert("pls fill all fields");
-//     }
-//     alert(`welcome ${fullName}`);
-//   };
+const App = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [password, setPassword] = useState("");
+  console.log(fullName, email, phoneNumber);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (!fullName || !email || !phoneNumber || !password) {
+      return alert("pls fill all fields");
+    }
+    alert(`welcome ${fullName}`);
+  };
 
 //   return (
 //     <>
