@@ -13,7 +13,7 @@ const BlogCard = ({ blog }) => {
 
       <div className={styles.blogCardBody}>
         <h4>{blog.title}</h4>
-        <p>{blog.body.slice(0, 100)}...</p>
+        <p>{blog.description && blog.description.slice(0, 100)}...</p>
         <div className={styles.blogCardFooter}>
           <div className={styles.left}>
             <div className={styles.authorImage}>

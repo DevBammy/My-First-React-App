@@ -12,7 +12,7 @@ const LatestBlogs = ({ blogs }) => {
         {blogs &&
           blogs
             ?.slice(0, 4)
-            ?.map((blog) => <BlogCard blog={blog} key={blog.id} />)}
+            ?.map((blog, i) => <BlogCard blog={blog} key={i} />)}
       </div>
     </section>
   );
