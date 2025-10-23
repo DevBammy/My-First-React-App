@@ -1,0 +1,46 @@
+.blogDetails {
+  width: 90%;
+  margin: 1rem auto;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    position: absolute;
+    color: white;
+    z-index: 1;
+  }
+}
+
+.image:after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.blogBody {
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.blogBody p {
+  margin-bottom: 1rem;
+}
