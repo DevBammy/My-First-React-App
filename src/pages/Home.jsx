@@ -5,6 +5,7 @@ import Hero from '../component/homeComps/Hero';
 import LatestBlogs from '../component/homeComps/LatestBlogs';
 import { useState } from 'react';
 import Testimonial from '../component/homeComps/Testimonial';
+const apiKey = import.meta.env.VITE_APIKEY;
 
 const Home = () => {
   const [blogs, setBlogs] = useState(allBlogs);

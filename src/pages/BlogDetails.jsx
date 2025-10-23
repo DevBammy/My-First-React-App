@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import moment from 'moment';
 import image from '../assets/hero.jpg';
 import styles from '../styles/blogDetails.module.css';
+const apiKey = import.meta.env.VITE_APIKEY;
+const apiEndPoint = import.meta.env.VITE_APIKEY;
 
 const BlogDetails = () => {
   const { id } = useParams();
